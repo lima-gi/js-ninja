@@ -1,0 +1,30 @@
+javascript ninja
+
+requisitos:
+
+* navegador
+* editor
+* SO
+* basic HTML/CSS
+
+software necessário:
+
+* browser
+* editor
+* nodeJs (para executar js)
+° mostrou como executar no browser (inspecionar)
+° mostrou que só precisa digitar "node" que abre o proprio executar do node
+
+formato da aula:
+
+* 10min por vídeo
+
+suporte:
+
+* via issues no github (já peguei o link)
+° new issues (coloca aula sobre colchetes, onde é para colocar o titulo)
+° write (escreve duvida)
+° submit
+° ** assim se inscreve em negrito, com 2 asteristicos em volta **
+
+desafios serao via pr no github...
