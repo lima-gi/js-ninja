@@ -6,14 +6,20 @@ para o contrário.
 */
 
 var isTruthy = function(a){
-    // if(a === true){
-    //     return true;
-    // } else {
-    //   return false;
-    // }
-   var verifica = a === true ? true : false;
-   return verifica;
+    if(a){
+        return true;
+    } 
+     return false;
+    
+// ternario
+//   return param? true : false;
+// 
+
+// equivalente boleano
+// return !!param;
+
 }
+
 
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
@@ -22,14 +28,22 @@ isTruthy(0);
 isTruthy(null);
 isTruthy(undefined);
 isTruthy(NaN);
+isTruthy('');
 isTruthy(-0);
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
 isTruthy('isso ai');
-isTruthy("tudo certo");
+isTruthy(20);
+isTruthy(20 * 80);
 isTruthy({})
+isTruthy([])
+isTruthy([2,4,6])
+isTruthy({frutas:uva, manga, mamão})
+isTruthy(function(){});
+isTruthy(10 + 30);
+isTruthy('Exercício');
 
 
 /*
@@ -86,7 +100,7 @@ Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 
 carro.obterMarcaModelo = function(){
-    return "Esse carro é um" + carro.obterMarca + ' ' + carro.obterModelo + '"';
+    return "Esse carro é um" + carro.obterMarca() + ' ' + carro.obterModelo() + '"';
 }
 
 /*
@@ -106,19 +120,18 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 
-carro.adicionarPessoas = function(qtd){
-    //qtd === 5 ? cheio : vazio;
-    carro.assentos = qtd;
-    if (qtd === 5){
-        return "O carro já está lotado!";
-    }
-    if (qtd < 5){
-        var faltam = (qtd - 5);
-        var faltaUm = qtd === 4 ? "pessoa" : "pessoas";
-        return "Só cabe mais " + faltam + " " + faltaUm;
-    }
-    return "Já temos " + qtd + " pessoas no carro!"
-}
+// carro.adicionarPessoas = function(qtd){
+//     var totalPessoas = carro.quantidadePessoas + qtd;
+//     if (qtd === 5){
+//         return "O carro já está lotado!" ;
+//     }
+//     if (qtd < 5){
+//         var faltam = (qtd - 5);
+//         var faltaUm = qtd === 4 ? "pessoa" : "pessoas";
+//         return "Só cabe mais " + faltam + " " + faltaUm;
+//     }
+//     return "Já temos " + totalPessoas + " pessoas no carro!"
+// }
 
 
 /*
@@ -133,7 +146,7 @@ pessoa.obterCor(); //'preto'
 
 // Mude a cor do carro para vermelho.
 
-pessoa.mudarCor(vermelho); //'vermelho'
+pessoa.mudarCor('vermelho'); //undefined
 
 // E agora, qual a cor do carro?
 
@@ -141,7 +154,7 @@ pessoa.obteCor(); //'vermelho'
 
 // Mude a cor do carro para verde musgo.
 
-pessoa.mudarCor(verde-musgo); //verde-musgo
+pessoa.mudarCor('verde-musgo'); 
 
 // E agora, qual a cor do carro?
 
